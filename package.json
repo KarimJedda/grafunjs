@@ -1,0 +1,25 @@
+{
+  "name": "grafunjs",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testgrafun"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KarimJedda/grafunjs"
+  },
+  "keywords": [
+    "graph",
+    "js"
+  ],
+  "author": "Karim Jedda",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/KarimJedda/grafunjs/issues"
+  },
+  "dependencies": {
+    "commander": "~2.8.1"
+  }
+}
