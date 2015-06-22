@@ -23,11 +23,14 @@ fs.readFile(filename, 'utf8', function(err, data) {
     var type = parsed.body[element].type;
     if(type === "FunctionDeclaration"){
       var name = parsed.body[element].id['name'];
-      console.log(type + " " + name)      
-    } else {
-      // it is not a function, but something else
-      console.log(parsed.body[element]);
+      // console.log(type + " " + name)      
+    } 
+    // it is not a function, but something else
+    if(type === "ExpressionStatement"){
+      console.log(JSON.stringify(parsed.body[element], null, 2));
     }
+      
+
 
   }
 });
