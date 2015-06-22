@@ -19,5 +19,15 @@ fs.readFile(filename, 'utf8', function(err, data) {
   // console.log(JSON.stringify(esprima.parse(data.toString()), null, 2));
   // at this point we should loop through parsed.body and look for all "FunctionDeclaration" 
   // types, to get a list of the functions and their names & params
-  console.log(parsed.body[0].type);
+  for(var element in parsed.body){
+    var type = parsed.body[element].type;
+    if(type === "FunctionDeclaration"){
+      var name = parsed.body[element].id['name'];
+      console.log(type + " " + name)      
+    } else {
+      // it is not a function, but something else
+      console.log(parsed.body[element]);
+    }
+
+  }
 });
